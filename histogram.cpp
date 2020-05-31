@@ -2,23 +2,24 @@
 
 void find_minmax(const vector<double>& numbers, double& min, double& max)
 {
-            if (numbers.size()!= 0) {
+    if (numbers.size()!= 0)
+    {
         min = numbers[0];
         max = numbers[0];
         for (double number : numbers)
         {
 
-                if (number < min)
-        {
-            min = number;
-        }
+            if (number < min)
+            {
+                min = number;
+            }
 
-        if (number > max)
-        {
-            max = number;
-        }
+            if (number > max)
+            {
+                max = number;
+            }
 
-         }
+        }
 
     }
 
@@ -91,43 +92,3 @@ void show_histogram_text(vector <size_t> bins)
     }
 }
 
-  vector <string> input_colors(size_t bin_count)
-{
-
-    vector<string> colors(bin_count);
-    bool flag2;
-    for (size_t i=0; i<bin_count; i++) {
-    do {
-        cin >> colors[i];
-            bool flag1 = true;
-        for (auto s : colors[i]){
-            if (s == ' '){
-                flag1 = false;
-            }
-        }
-        if(colors[i][0] == '#'){
-            if (flag1 == true){
-                flag2 = true;
-            }
-            else {
-                flag2 = false;
-                cerr << "Error1";
-            }
-        }
-
-        else if(colors[i][0] != '#'){
-            if(flag1 = true){
-                flag2 = true;
-            }
-            else{
-                flag2 = false;
-                cerr << "Error2";
-            }
-        }
-
-    }
-    while(flag2 == false);
-    }
-
-        return colors;
- }

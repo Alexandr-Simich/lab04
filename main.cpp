@@ -22,11 +22,9 @@ int main()
 
     auto bins = make_histogram(numbers, bin_count, min, max);
 
-    cerr << "Enter column colors: ";
 
-    const auto colors = input_colors(bin_count);
 
-    show_histogram_svg(bins, colors, bin_count);
+    show_histogram_svg(bins, bin_count);
 
     return 0;
 }
