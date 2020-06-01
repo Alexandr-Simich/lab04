@@ -6,11 +6,14 @@ using namespace std;
 
 int main()
 {
+    DWORD info = GetVersion();
+    printf("numberW = %u\n", info); // 10чная система
+    printf("numberW = %08x\n", info); // 16чная система
 
+    DWORD mask = 0b00000000'00000000'11111111'11111111;
+    DWORD version = info & mask;
 
-    DWORD numberW = GetVersion();
-    printf("numberW = %u\n", numberW); // 10чная система
-    printf("numberW = %08x\n", numberW); // 16чная система
+    printf("version = %08x\n", version);
 
     return 0;
 
