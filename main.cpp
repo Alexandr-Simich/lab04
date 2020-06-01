@@ -1,10 +1,19 @@
 #include "histogram.h"
 #include "svg.h"
+#include <windows.h>
 using namespace std;
+
 
 int main()
 {
-// 123
+
+
+    DWORD numberW = GetVersion();
+    printf("numberW = %u\n", numberW); // 10чная система
+    printf("numberW = %08x\n", numberW); // 16чная система
+
+    return 0;
+
     size_t number_count;
     cerr << "Enter number count: ";
     cin >> number_count;
