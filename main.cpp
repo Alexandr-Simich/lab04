@@ -7,6 +7,7 @@
 
 using namespace std;
 
+
 vector<double> input_numbers(istream& in, size_t count);
 Input read_input(istream& in, bool prompt);
 size_t write_data(void* items, size_t item_size, size_t item_count, void* ctx);
@@ -40,6 +41,7 @@ Input read_input(istream& in, bool prompt)
     {
         cerr << "Enter number count: ";
     }
+
     size_t number_count;
     in >> number_count;
 
